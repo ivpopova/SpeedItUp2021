@@ -1,0 +1,125 @@
+﻿body {
+    background-color: #EEEEEE;
+}
+
+input {
+    margin-bottom: 3vh;
+}
+
+.btn {
+    background: #f48120;
+    color: #fff;
+    border-radius: 3px;
+    border: 2px solid #f48120;
+    padding: 0rem 2rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn:hover {        
+    background-color: transparent;
+    color: #111111;
+}
+
+.table-primary {
+    background-color: #ffc752;
+}
+
+td, th {
+    border: none !important;
+}
+
+.booking-button {
+    margin-top: 2vh;
+    margin-bottom: 6vh;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+.container .content {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1;
+    width: 100%; 
+    padding: 20px; 
+ }
+
+#table {
+    border-style: hidden !important;
+}
+
+.header {
+    font-size: 3vh;
+    color: #545151;
+    padding-bottom: 2vh;
+}
+
+.time {
+    padding-top: 2vh;
+}
+
+.entertainer {
+    padding-bottom: 2vh;
+}
+
+.table-entry {
+    padding: 1vh;
+}
+
+#profile-button {
+    padding: 0.5vh;
+}
+
+#add-child-button {
+    padding: 0.5vh;
+    margin-top: 5vh;
+}
+
+#parent-child-table {
+    margin-top: 5vh;
+}
+
+#parent-information {
+    padding: 0.5vh;
+    border-radius: 10px;
+    background-color: #f48120;
+}
+
+#parent-information .btn {
+    background: #f1f1f1;
+    color: #111;
+}
+
+#booking h1 {
+    margin-top: 2vh;
+    font-size: 10vh;
+    margin-bottom: 5vh;
+}
+
+#booking h2{
+    font-size: 3vh;
+}
+
+#comment-label{
+    margin-top: 3vh;
+}
+
+#booking textarea {
+    margin-top: 1vh;
+}
+
+#book-button
+{
+    padding: 1vh;
+    margin-top: 3vh;
+}
+
+#reports h1 {
+    margin-top: 2vh;
+    font-size: 10vh;
+    margin-bottom: 5vh;
+}

@@ -1,0 +1,141 @@
+﻿@model IEnumerable<SpeedItUp.Models.Slot>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Schedule</h1>
+
+<br />
+
+<table id="table" class="col-md-12 align-middle table-bordered text-center">
+
+    <tr>
+        <th class="text-center header">Monday</th>
+        <th class="text-center header">Tuesday</th>
+        <th class="text-center header">Wednesday</th>
+        <th class="text-center header">Thursday</th>
+        <th class="text-center header">Friday</th>
+    </tr>
+
+    <tr>
+        @for (int i = 0; i < 5; i++)
+        {
+            <th class="text-center table-primary time">09:00 - 13:00</th>
+        }
+    </tr>
+
+    <tr>
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            @if (i % 2 == 0)
+            {
+                <th class="text-center table-primary entertainer">
+                    @Model.ElementAt(i).Entertainers.First().UserName
+                </th>
+            }
+        }
+
+    </tr>
+
+    <tr>
+
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            @if (i % 2 == 0)
+            {
+                <td class="text-center table-entry">
+                    <ul style="list-style-type: none; padding: 0;">
+                        @foreach (var child in Model.ElementAt(i).Children)
+                        {
+                            <li style="padding-bottom: 0.5vh;">
+                                @child.FullName
+                            </li>
+                        }
+                        <ul>
+                </td>
+            }
+        }
+
+    </tr>
+
+    <tr>
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            @if (i % 2 == 0)
+            {
+                <td>
+                    <a asp-controller="Children" asp-action="AddToSlot" asp-route-id="@Model.ElementAt(i).Id" type="button" class="btn btn-primary justify-content-center booking-button">
+                        Book
+                        <br />
+                        <small>
+                            Available: 
+                            @(15 - Model.ElementAt(i).Children.Count())
+                        </small>
+                    </a>
+                </td>
+            }
+        }
+    </tr>
+    <tr>
+        @for (int i = 0; i < 5; i++)
+        {
+            <th class="text-center table-primary time">13:00 - 18:00</th>
+        }
+    </tr>
+
+    <tr>
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            @if (i % 2 == 1)
+            {
+                <th class="text-center table-primary entertainer">
+                    @Model.ElementAt(i).Entertainers.First().UserName
+                </th>
+            }
+        }
+
+    </tr>
+
+
+    <tr>
+
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            @if (i % 2 == 1)
+            {
+                <td class="text-center table-entry">
+                    <ul style="list-style-type: none; padding: 0;">
+                        @foreach (var child in Model.ElementAt(i).Children)
+                        {
+                            <li style="padding-bottom: 0.5vh;">
+                                @child.FullName
+                            </li>
+                        }
+                        <ul>
+</td>
+            }
+        }
+
+    </tr>
+
+    <tr>
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            @if (i % 2 == 1)
+            {
+                <td>
+                    <a asp-controller="Children" asp-action="AddToSlot" asp-route-id="@Model.ElementAt(i).Id" type="button" class="btn btn-primary justify-content-center booking-button">
+                        Book
+                        <br />
+                        <small>
+                            Available:
+                            @(15 - Model.ElementAt(i).Children.Count())
+                        </small>
+                    </a>
+                </td>
+            }
+        }
+    </tr>
+
+</table>

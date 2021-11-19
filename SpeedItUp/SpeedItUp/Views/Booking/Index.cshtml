@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Booking";
+}
+<body>
+    <div class="container" id="booking">
+
+        <div  class="row">
+            <h2 class="offset-md-3" id="slot-information">Slot 1 - 20.10.2021</h2>
+        </div>
+
+        <div class="row">
+            <h1 class="offset-md-3">@ViewData["Title"]</h1>
+        </div>
+
+        <div class="row">
+            <h2 class="offset-md-3">Choose a child</h2>
+        </div>
+
+        <div class="row">
+
+            <form class="offset-md-3 col-md-6">
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input checkbox-child" id="cb-1">
+                    <label class="custom-control-label" for="cb-1">Valeri Bojinov</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input checkbox-child" id="cb-2">
+                    <label class="custom-control-label" for="cb-2">Maria Ivanova</label>
+                </div>
+
+                <label id="comment-label" for="comments">Comments</label>
+                <textarea class="form-control"
+                          id="comments"
+                          rows="3"
+                          placeholder="Add a comment">
+                </textarea>
+
+                <div class=" text-center">
+                    <button id="book-button" class="btn btn-primary">Book</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</body>
+
+    <!--https://localhost:44351/Booking  : url-->

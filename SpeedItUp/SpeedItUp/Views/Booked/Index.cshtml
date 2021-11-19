@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<div class="text-left" style="margin-bottom: 5%; margin-top: 5%">
+    <h1 class="display-1"><b>Booked</b></h1>
+</div>
+
+<div class="col-md-8">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Nickname</th>
+                <th>Date of Birth</th>
+                <th>Parent Information</th>
+                <th>Notes</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @for(int i = 0; i < 5; i++)
+            {
+                <tr>
+                    <td>Ivan Ivanov</td>
+                    <td>4o4o</td>
+                    <td>12.12.2012</td>
+                    <td>Ivanka Ivanova</td>
+                    <td>notes...</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h6>just a demo for now</h6>
+</div>

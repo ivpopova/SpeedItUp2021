@@ -1,0 +1,54 @@
+﻿@model SpeedItUp.Models.PersonViewModel
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<body>
+    <div class="row">
+        <div class="col-md-6">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+
+        <div class="col-md-6" id="parent-information">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="name">Name</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Name" value="@Model.FullName">
+            </div>
+     
+
+        </div>
+    </div>
+
+    <div class="row" id="parent-child-table">
+
+        <table id="table" class="col-md-12 align-middle table-bordered text-center">
+            <tr>
+                <th class="text-center header">Name</th>
+                <th class="text-center header">Nickname</th>
+                <th class="text-center header">Date of Birth</th>
+                <th class="text-center header">Notes</th>
+            </tr>
+
+            @foreach (var item in Model.Children)
+            { 
+            <tr>
+                <th class="text-center table-entry">@item.FullName</th>
+                <th class="text-center table-entry">@item.NickName</th>
+                <th class="text-center table-entry">@item.BirthDate.Date</th>
+                <th class="text-center table-entry">@item.Notes</th>
+            </tr>
+            }
+
+        </table>
+
+        <button id="add-child-button" class="btn btn-primary offset-md-5 col-md-2" type="button">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Children" asp-action="Create"> Add a child</a>
+        </button>
+
+    </div>
+
+</body>
+
